@@ -14,7 +14,15 @@ def calc_min_max_temperature(tempList):
     min_max_list = [max(est_list), min(est_list)]
     return min_max_list
 
-def sort():
-    print("sort")
-def med():
-    print("med")
+def calc_median_temperature(tempList):
+    tempList.sort()
+    n = len(tempList)
+
+    if n % 2 == 1:
+        # Odd number of elements → return middle one
+        return tempList[n // 2]
+    else:
+        # Even number of elements → average the two middle ones
+        mid1 = tempList[n // 2]
+        mid2 = tempList[n // 2 - 1]
+        return (mid1 + mid2) / 2
