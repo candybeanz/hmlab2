@@ -28,11 +28,11 @@ def cal_bmi(w,h):
     print("Weight is "+ str(w))
     cal=w/(h**2)
     if cal<18.5:
-        print("under weight")
+        return -1
     elif cal>=18.5 and cal<=25.0:
-        print("normal weight")
+        return 0
     else:
-        print("over weight")
+        return 1
     return cal
 bmi=cal_bmi(W,H)
 print(f"bmi is {bmi}")
